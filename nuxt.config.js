@@ -44,7 +44,15 @@ export default {
     [
       '@nuxtjs/firebase',
       {
-        config: {},
+        config: {
+          apiKey: 'AIzaSyDcvBgPSvmmuDPIokcOd-2Avb-3kn1Wjw4',
+          authDomain: 'trello-clone-83fa2.firebaseapp.com',
+          projectId: 'trello-clone-83fa2',
+          storageBucket: 'trello-clone-83fa2.appspot.com',
+          messagingSenderId: '376780127289',
+          appId: '1:376780127289:web:e922f0c8a940296b7da1e8',
+          measurementId: 'G-Z51KT1F1R1',
+        },
         services: {
           auth: {
             persistence: 'local', // default
