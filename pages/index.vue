@@ -217,7 +217,7 @@ export default {
       this.$refs['boardBackground'].click()
     },
     onFileClicked($event) {
-      $event.target.value = ''
+      // $event.target.value = ''
     },
     onFileSelected(event) {
       try {
