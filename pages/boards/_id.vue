@@ -9,6 +9,7 @@
         : ''
     "
   >
+    <!-- Header -->
     <div class="d-block">
       <v-container fluid class="trello-topbar">
         <div class="d-flex justify-space-between">
@@ -63,6 +64,8 @@
     </div>
     <h1>{{ board.title }}</h1>
     <small>created {{ board.dateCreated | formatDate }}</small>
+
+    <!-- List Catelogs list in current board -->
     <div class="d-flex flex-row pr-6 pt-3">
       <div
         v-for="list in board.lists"

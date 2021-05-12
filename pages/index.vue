@@ -1,6 +1,8 @@
 <template>
+  <!-- Main page -->
   <v-container>
     <v-dialog v-model="dialog" max-width="355" persistent>
+      <!-- Header -->
       <v-container class="d-block">
         <v-row no-gutters align="center" justify="space-between">
           <v-row no-gutters>
@@ -8,6 +10,12 @@
           </v-row>
           <v-icon @click="dialog = false">mdi-close</v-icon>
         </v-row>
+        <!--   
+  Form: Create new Board
+  Accepts: Board Title
+          Board Color and
+          Board background color      
+         -->
         <v-form ref="form" v-model="valid">
           <div class="d-flex flex-column">
             <v-text-field
@@ -82,6 +90,9 @@
       <h1>My Boards</h1>
       <v-btn small depressed @click="addBoard">ADD BOARD</v-btn>
     </div>
+    <!-- 
+  List all boards available
+     -->
     <div class="d-flex flex-wrap align-center justify-start">
       <p v-if="boards.length === 0">You have no boards yet.</p>
       <v-card
@@ -217,7 +228,7 @@ export default {
       this.$refs['boardBackground'].click()
     },
     onFileClicked($event) {
-      // $event.target.value = ''
+      $event.target.value = ''
     },
     onFileSelected(event) {
       try {
